@@ -8,5 +8,6 @@
             "email": "toetet248@gmail.com"
         }
     ],
+    "minimum-stability": "dev",
     "require": {}
 }
