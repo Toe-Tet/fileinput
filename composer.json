@@ -20,7 +20,8 @@
     "require": {
         "php": ">=7.2.5",
         "illuminate/support": "~5.8.0|^6.0|^7.0",
-        "laravel/helpers": "^1.1"
+        "laravel/helpers": "^1.1",
+        "jrm2k6/cloudder": "^0.6.0"
     },
     "autoload": {
         "psr-4": {
