@@ -1,0 +1,48 @@
+<?php
+
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class CreateFilesTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        $tableName = config('fileinput.table_name');
+
+        if (empty($tableName)) {
+            throw new \Exception('Error: config/fileinput.php not loaded. Run [php artisan config:clear] and try again.');
+        }
+
+        Schema::create($tableName, function (Blueprint $table) {
+            $table->id();
+            $table->string('file');
+            $table->string('input_name')->nullable();
+            $table->integer('related_id')->unsigned();
+            $table->string('related_type');
+            $table->timestamps();
+        });
+
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        $tableName = config('fileinput.table_name');
+
+        if (empty($tableName)) {
+            throw new \Exception('Error: config/fileinput.php not found and defaults could not be merged. Please publish the package configuration before proceeding, or drop the tables manually.');
+        }
+
+        Schema::drop($tableName);
+    }
+}
