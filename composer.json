@@ -1,16 +1,14 @@
 {
-    "name": "toetet/myanmarnrc",
-    "description": "Package for Myanmar National Registration Card",
+    "name": "toetet/fileinput",
+    "description": "Package for Simple File Input",
     "keywords": [
         "toetet",
         "laravel",
-        "myanmar",
-        "nrc",
-        "myanmarnrc",
-        "national registration card"
+        "file input",
+        "simple file input",
       ],
     "type": "library",
-    "homepage": "https://github.com/Toe-Tet/myanmarnrc",
+    "homepage": "https://github.com/Toe-Tet/fileinput",
     "license": "MIT",
     "authors": [
         {
@@ -26,17 +24,14 @@
     },
     "autoload": {
         "psr-4": {
-            "Toetet\\MyanmarNrc\\": "src/"
+            "Toetet\\FileInput\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Toetet\\MyanmarNrc\\MyanmarNrcServiceProvider"
-            ],
-            "aliases": {
-                "Nrc": "Toetet\\MyanmarNrc\\Facades\\Nrc"
-            }
+                "Toetet\\FileInput\\FileInputServiceProvider"
+            ]
         }
     }
 }
