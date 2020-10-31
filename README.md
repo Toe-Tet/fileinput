@@ -1,8 +1,6 @@
 # File Input
 This package is written for simple file input. It allows to store in your local directory or cloudinary platform (online media storage).
 
-Other functions related with File Input are also included.
-
 ## Installation
 ```bash
 composer require toetet/fileinput
