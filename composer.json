@@ -1,6 +1,14 @@
 {
     "name": "toetet/fileinput",
     "description": "Package for Simple File Input",
+    "keywords": [
+        "toetet",
+        "laravel",
+        "file input",
+        "simple file input"
+      ],
+    "type": "library",
+    "homepage": "https://github.com/Toe-Tet/fileinput",
     "license": "MIT",
     "authors": [
         {
@@ -9,5 +17,22 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {}
+    "require": {
+        "php": ">=7.2.5",
+        "illuminate/support": "~5.8.0|^6.0|^7.0",
+        "laravel/helpers": "^1.1",
+        "jrm2k6/cloudder": "^0.6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Toetet\\FileInput\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Toetet\\FileInput\\FileInputServiceProvider"
+            ]
+        }
+    }
 }
